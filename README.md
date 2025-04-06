@@ -18,6 +18,7 @@ Fortunately I have `energy_eigen_buf` where this buffer stores
 - energy (2 bands)
 - eigenstates
 - k-vector
+
 for all k-points (having k-vector here was for the sake of memory alignment; There was an implicit alignment padding which had the exact size of k-vector, so I just put it. Turned out it's gonna be useful when drawing graph)
 
 ## Thoughts
