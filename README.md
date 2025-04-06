@@ -13,7 +13,8 @@ charge density 2.0
 
 # Next ToDo
 Draw energy band diagram for h0
-(Just for the sake of checking if my shader programs are working correctly, where I implemented complex number/vector/matrix operations on my own)
+(Just for the sake of checking if my shader programs are working correctly, where I implemented complex number/vector/matrix operations on my own.)
+
 Fortunately I have `energy_eigen_buf` where this buffer stores 
 - energy (2 bands)
 - eigenstates
@@ -23,14 +24,13 @@ for all k-points (having k-vector here was for the sake of memory alignment; The
 
 ## Thoughts
 
-- Learning a lot about wgpu through this
-    - passing & casting data structures between Rust and WGSL
+- I just realized I need to do a lot of linear algebra calculation with complex number, which I need to implement on my own; hard to generalize shader codes (e.g. dimensions of matrices)
+    - And I even shouldn't generalize those things in shader code either
+        - because conditional branching operations (if, loop, etc.) makes shader inefficient
+- Learning a lot about wgpu through this.
+    - Passing & casting data structures between Rust and WGSL
     - Learned about memory alignment rules
         - e.g. implicit alignment paddings
     - Buffer operatoins
         - copy data between (shader buffer) <-> (cpu buffer)
         - map & read from buffers
-- I just realized I need to do a lot of linear algebra calculation with complex number, which I need to implement on my own; hard to generalize shader codes (e.g. dimensions of matrices)
-    - And I even shouldn't generalize those things in shader code either
-        - because conditional branching operations (if, loop, etc.) makes shader inefficient
-
