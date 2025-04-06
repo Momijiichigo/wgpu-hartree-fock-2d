@@ -1,0 +1,16 @@
+[package]
+name = "wgpu-hartree-fock"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bytemuck = { version = "1.22.0", features = ["derive", "extern_crate_alloc"] }
+env_logger = "0.11.8"
+flume = "0.11.1"
+futures = "0.3.31"
+lazy_static = "1.5.0"
+log = "0.4.27"
+nalgebra = "0.33.2"
+pollster = "0.4.0"
+wgpu = "24.0.3"
+winit = { version = "0.30.9", features = ["rwh_05"] }
