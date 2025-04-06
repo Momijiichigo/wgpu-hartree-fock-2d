@@ -61,6 +61,7 @@ pub async fn run() {
     let density_arr = get_charge_density(&context, chem_potential).await;
     let density = density_arr.iter().sum::<f32>() / (density_arr.len() as f32);
     println!("# of k points: {}", density_arr.len());
+    println!("Trying chemical potential: {chem_potential}");
     println!("charge density {:?}", density);
 
 }
